@@ -1,0 +1,58 @@
+.button1,
+.button2 {
+  --borderRadius: 8px;
+}
+.button1 > div,
+.button2 > div {
+  cursor: pointer;
+  user-select: none;
+  padding: 2px;
+  border-radius: var(--borderRadius);
+  background-color: white;
+  position: relative;
+  transition: 0.5s;
+}
+.button1 > div > div,
+.button2 > div > div {
+  border-radius: var(--borderRadius);
+  padding: 0 28px 2px 28px;
+  min-height: 34px;
+  justify-content: center;
+
+  background-color: var(--blue1);
+  align-items: center;
+  display: flex;
+}
+.button1 > div:first-of-type,
+.button2 > div:first-of-type {
+  opacity: 0;
+  background-image: linear-gradient(white, var(--blue2));
+  position: absolute;
+}
+.button1 > div:first-of-type > div > div {
+  background: -webkit-linear-gradient(white 30%, var(--blue2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.button1:hover > div:first-of-type,
+.button2:hover > div:first-of-type {
+  opacity: 1;
+}
+.button1:hover > div:nth-of-type(2),
+.button2:hover > div:nth-of-type(2) {
+  opacity: 0;
+}
+.button2 > div > div {
+  color: var(--blue1) !important;
+}
+.button2 > div:first-of-type > div {
+  background-image: linear-gradient(white, var(--blue2));
+  color: var(--blue1) !important;
+}
+.button2 > div:nth-of-type(2) > div {
+  background-color: white;
+}

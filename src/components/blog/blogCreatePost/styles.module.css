@@ -1,0 +1,148 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 95%;
+  margin: auto;
+}
+.main > [class~="p-editor-container"] {
+  width: 100%;
+}
+.main [class~="p-editor-toolbar"] {
+  background-color: white;
+}
+
+.main [class~="p-editor-content"] {
+  font-size: 1.1em;
+}
+.main [class~="ql-editor"] {
+  min-height: 420px;
+}
+.topBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.topBox > div:first-of-type {
+  width: 60%;
+}
+.topBox > div:nth-of-type(2) {
+  width: 35%;
+}
+.topBox > div > input {
+  width: 100%;
+}
+.tagsBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 1em;
+}
+.tagsBox > div > input {
+  margin-right: 1em;
+
+  width: 12em;
+}
+.tagsBox > p {
+  font-size: 1.2em;
+  margin-right: 1em;
+}
+.tagsLabelBox {
+  font-size: 1.6em;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+.categoryLabel {
+  font-size: 0.875em;
+  color: black;
+  background-color: #feecfa;
+  font-weight: 600;
+  border-radius: 32px;
+  padding: 0.25em 1em;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+.categoryLabel:hover {
+  color: white;
+  background-color: rgb(235, 82, 82);
+}
+.eventPhotoBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25em;
+  width: 100%;
+  border: 2px dotted rgba(255, 255, 255);
+  text-align: center;
+  color: white;
+}
+.inputEventPhoto {
+  display: none;
+}
+.labelEventImage {
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.errorLabel {
+  font-size: 1rem;
+  color: red;
+  align-self: flex-end;
+  padding-bottom: 0.4rem;
+}
+.label {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  font-weight: 600;
+  font-size: 2em;
+  width: 100%;
+  color: var(--primary-color-darker-blue);
+}
+.createBlogButton {
+  width: 100%;
+  color: black;
+  border: 1px solid black;
+  border-radius: 6px;
+  bottom: 1.5em;
+  background-color: white;
+  font-size: 1.3em;
+  font-weight: 700;
+  padding: 0.75em 1.35em;
+  cursor: pointer;
+  text-align: center;
+}
+.createBlogButton:hover {
+  background-color: #feecfa;
+}
+.createBlogButton.disable {
+  cursor: default;
+  background-color: rgb(201, 201, 201);
+}
+.tagsBox .createBlogButton {
+  margin-right: 1rem;
+  width: max-content;
+}
+
+.editorWrapper {
+  color: initial;
+}
+.editor {
+  background-color: white;
+  cursor: text;
+  user-select: text;
+  border: 1px solid white;
+  min-height: 300px;
+  color: black;
+  width: 100%;
+}

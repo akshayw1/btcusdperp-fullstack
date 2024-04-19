@@ -1,0 +1,94 @@
+.main h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  white-space: normal;
+  padding: 0 1rem;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+}
+.main {
+  text-align: center;
+}
+.main p {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.button{
+  background-color: rgb(4, 4, 37);
+  color: rgb(247, 247, 247);
+  padding: 1rem;
+  border-radius: 1rem;
+
+}
+
+.main img {
+  max-width: 236px;
+  width: 18%;
+  margin: auto;
+  margin-top: 1rem;
+}
+.networkAddress {
+  text-align: left;
+  margin: auto;
+  width: fit-content;
+  border: 1px solid white;
+  padding: 26px 0;
+  border-radius: 44px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.networkAddress p {
+  padding: 0 80px 0 30px;
+}
+.main > p:last-of-type {
+  margin-bottom: 2rem;
+}
+.networkAddress hr {
+  margin: 1rem 0;
+}
+
+.copy {
+  cursor: pointer;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+.main .copy img {
+  margin: 0;
+  margin-left: 0.2rem;
+  height: 32px;
+  width: 32px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.main .copy:hover img {
+  opacity: 1;
+}
+@media only screen and (max-width: 960px) {
+  .main .copy img {
+    height: 24px;
+    width: 24px;
+  }
+  .main img {
+    width: 45%;
+  }
+  .main p {
+    font-size: 1.1rem;
+  }
+  .networkAddress {
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  .networkAddress p {
+    word-break: break-all;
+    white-space: normal;
+    padding: 0 30px 0 30px;
+  }
+}

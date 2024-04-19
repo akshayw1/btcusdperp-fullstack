@@ -1,0 +1,400 @@
+.main h2 {
+  font-size: 3.75rem;
+  font-weight: 600;
+}
+.main {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 13px;
+  gap: 1em;
+}
+.bgWhite {
+  background-color: white;
+}
+.entry {
+  width: 100%;
+  background: white;
+  border-radius: 19px;
+  padding: 1em;
+  border: 1px solid #242535;
+  display: flex;
+  flex-direction: column;
+  height: 26em;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+.entry:hover .categoryLabel {
+  background-color: white;
+}
+.categoryLabelBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.categoryLabel {
+  font-size: 0.875em;
+  color: black;
+  background-color: #feecfa;
+  font-weight: 600;
+  border-radius: 16px;
+  padding: 4px 16px;
+}
+.entry img {
+  border-radius: 16px;
+  object-fit: cover;
+  height: 50%;
+}
+.entry p {
+  color: black;
+}
+.mainEntryBox {
+  min-height: 1140px;
+  padding: 10px;
+  background-color: #f4f9ff;
+  border-radius: 12px;
+}
+.entryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  position: relative;
+}
+.recentPosts {
+  padding: 0.625em;
+  padding-right: 0;
+  border-radius: 1em;
+  background-color: #feecfa;
+  padding-bottom: 1.5em;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 1em;
+}
+.recentPosts h3 {
+  font-weight: bold;
+  color: black;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.entryHero {
+  padding: 0.625em;
+  border-radius: 1em;
+  background-color: #feecfa;
+  padding-bottom: 1.5em;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.heroPostBottom {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.heroPostBottom > p {
+  font-size: 0.938rem !important;
+  color: #4e4b4b !important;
+  font-weight: 600 !important;
+  text-align: left;
+}
+.heroPostImg {
+  height: 55%;
+  width: 100%;
+}
+.heroPostText {
+  color: #4e4b4b;
+  height: 4.7em;
+  overflow: hidden;
+}
+.heroPostImg img {
+  object-fit: cover;
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+}
+.entryHero h3 {
+  cursor: pointer;
+
+  font-weight: 800;
+  color: black;
+  font-size: 1.5em;
+}
+.entryHero h3:hover {
+  color: #333;
+}
+
+.entryHeroInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.entryHeroInfo p {
+  color: #797979;
+
+  font-size: 1em;
+  font-weight: bold;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  max-height: 30em;
+}
+.gridRecentPosts {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  gap: 1em;
+  padding-right: 0.625em;
+}
+.recentPostEntry {
+  height: 4.75em;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  cursor: pointer;
+  padding: 0 0.5em 0 0;
+  border-radius: 8px;
+}
+.recentPostEntryImg {
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.recentPostEntryImg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.recentPostEntry:hover {
+  background-color: white;
+}
+
+.recentPostText {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75em;
+  color: black;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.recentPostTitle {
+  height: 4.5em;
+  overflow: hidden;
+  text-align: left;
+  font-weight: 700;
+}
+
+.recentPostAuthor {
+  font-weight: 600;
+  color: black;
+}
+.recentPostEntryInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.recentPostDate {
+  color: black;
+  font-weight: 500;
+}
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 80%;
+}
+.entryTitle {
+  font-size: 1.2em;
+  font-weight: 700;
+  height: 86.391px;
+}
+
+.entryInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.entryAuthor {
+  font-weight: 600;
+}
+.entryDate {
+  font-weight: 400;
+}
+.entryGridShowMore {
+  color: black;
+  border: 1px solid black;
+  border-radius: 6px;
+  bottom: 1.5em;
+  background-color: white;
+  font-size: 1.1em;
+  font-weight: 700;
+  padding: 0.75em 1.35em;
+  cursor: pointer;
+  width: max-content;
+  margin: 2em auto;
+  margin-bottom: 1.5em;
+}
+.entryGridShowMore:hover {
+  background-color: #feecfa;
+}
+.entry:hover {
+  background-color: #feecfa;
+}
+.hotStory {
+  background-color: #f4f9ff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  padding: 0.625em;
+  align-items: center;
+  padding-top: 1em;
+  
+}
+.hotStory h3 {
+  font-weight: bold;
+  color: black;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.hotStoryGrid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.hotStoryLabel {
+  font-weight: 600;
+  font-size: 1.15em;
+  border-radius: 4px;
+  background-color: #e3e3e3;
+  color: black;
+  padding: 0.2em 1em;
+  cursor: pointer;
+  overflow: hidden;
+}
+.hotStoryLabel:hover {
+  background-color: #c2c1c1;
+}
+.createBlogButton {
+  width: 100%;
+  color: black;
+  border: 1px solid black;
+  border-radius: 6px;
+  bottom: 1.5em;
+  background-color: white;
+  font-size: 1.3em;
+  font-weight: 700;
+  padding: 0.75em 1.35em;
+  cursor: pointer;
+  text-align: center;
+}
+.createBlogButton:hover {
+  background-color: #feecfa;
+}
+.hotH2 {
+  text-align: left;
+  color: black;
+  font-size: 1.8em;
+  font-weight: 600;
+  width: 100%;
+}
+.mainHot {
+  width: 95%;
+  margin: auto;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.mainHotSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+  gap: 1em;
+  font-size: 13px;
+}
+@media only screen and (max-width: 1340px) {
+  .entryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .main {
+    font-size: 16px;
+  }
+  .top {
+    flex-direction: column;
+    max-height: none;
+  }
+  .entryHero {
+    height: 30em;
+    width: 100%;
+  }
+  .recentPosts {
+    width: 100%;
+  }
+  .gridRecentPosts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-height: 20em;
+  }
+  .main {
+    width: 100%;
+    margin: 0;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .hotStory {
+    width: 80%;
+  }
+  .hotStoryGrid {
+    justify-content: center;
+  }
+  .mainSection {
+    width: 100%;
+  }
+  .entryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .entryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 960px) {
+  .hotStory h3 {
+    text-align: center;
+  }
+  .gridRecentPosts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 635px) {
+  .entryGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .main {
+    font-size: 14px;
+  }
+}

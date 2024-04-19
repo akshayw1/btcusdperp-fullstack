@@ -1,0 +1,283 @@
+.main {
+  width: 100%;
+  font-size: 0.9rem;
+  display: flex;
+
+  padding: 0;
+  /* padding-bottom: 7rem; */
+  flex-direction: column;
+  align-items: flex-start;
+
+  box-sizing: border-box;
+}
+
+/* CSS */
+
+
+.live-indicator-block {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.liveIndicator {
+  font-family: 'Roboto', sans-serif;
+  background: #ea2429;
+  color: #fff;
+  padding: 6px 7px;
+  line-height: 1;
+  border-radius: 6px;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  margin-right: 1rem;
+  display: flex;
+  font-weight: bold;
+  width: auto;
+}
+
+.liveIndicator .blink{
+  animation: blinker 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+  font-size: 10px;
+  margin-right: 5px;
+  vertical-align: baseline;
+
+}
+
+
+
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+/* styles.css */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.indicator-circle {
+  width: 20px;
+  height: 20px;
+  background-color: #00ff00; /* Green color for indicator */
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red-circle {
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000; /* Red color for blinking circle */
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1s infinite; /* Blinking animation */
+}
+
+
+.head1 {
+  font-weight: 600;
+  color: rgb(179, 179, 179);
+
+  background-color: #212223;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.head1 .prov {
+  width: 50%;
+  padding: 8px;
+  gap: 2px;
+}
+
+.head1 .prov:nth-child(2) {
+  width: 50%;
+  border-left: 1px solid rgb(200, 200, 200);
+  gap: 2px;
+}
+
+.zigZagText {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  font-size: 2.4rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  width: 100%;
+  background: linear-gradient(90deg, #2c5cda, #6b15e7, #2a5fda);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table input[type="checkbox"],
+.table input[type="radio"] {
+  display: none;
+}
+
+.table table {
+  width: 100%;
+  white-space: nowrap;
+}
+.table thead {
+  background-color: #656a6b;
+}
+.table th {
+  padding: 8px 1rem;
+}
+.table tbody td,
+.table tr {
+  max-height: 48px;
+  padding: 8px 0.25rem;
+  text-align: center;
+}
+.table tr {
+  background-color: #181a1b;
+}
+.tableAdmin tr:nth-of-type(odd) {
+  background-color: #292c2e !important;
+}
+.tableAdmin tr {
+  padding: 0;
+}
+.tableAdmin td {
+  height: 37px;
+  align-items: center;
+  justify-content: center;
+}
+.table thead,
+.table tfoot {
+  background-color: #333;
+  color: #fff;
+}
+.table option {
+  color: black;
+}
+.table select {
+  color: black;
+}
+.label1 {
+  display: none;
+  justify-content: center;
+  user-select: none;
+  overflow: hidden;
+  width: 100%;
+  align-items: center;
+}
+.dropdown {
+  padding: 0 0.25rem !important;
+}
+.table td > label {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  padding: 8px 1rem;
+  user-select: none;
+  align-items: center;
+}
+.table td > label:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.table .input1[type="checkbox"]:checked ~ .label1 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2e3335;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1;
+  font-weight: 500;
+}
+.label1 > input[type="radio"]:not(:checked) ~ label {
+  display: none;
+}
+.table .input1[type="checkbox"]:checked ~ .label1 > label {
+  display: flex !important;
+  justify-content: center;
+  padding: 8px 0;
+  cursor: pointer;
+  width: 100%;
+}
+.table .input1[type="checkbox"]:checked ~ .label1 > label:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.green {
+  background-color: #008e34;
+}
+.green img {
+  transform: rotate(270deg);
+}
+.red {
+  background-color: #cf0303;
+}
+.red img {
+  transform: rotate(90deg);
+}
+.blue {
+  background-color: #033879;
+}
+.yellow {
+  background-color: #9d6e00;
+}
+.yellow img {
+  transform: rotate(90deg);
+}
+
+.red,
+.green,
+.blue,
+.yellow {
+  border-radius: 4px;
+  height: 2rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+.wide {
+  width: 160px;
+  align-items: center;
+  height: 1.5rem;
+  justify-content: flex-end;
+  padding: 0 1rem;
+  justify-content: center;
+}
+.wide img {
+  width: auto;
+  height: 1.5rem;
+}
+.wide.blue img {
+  transform: rotate(270deg);
+}
+.inputTable {
+  width: 7rem;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid white;
+  background-color: #181a1b;
+}
+.rotate90 {
+  transform: rotate(0) !important;
+}
