@@ -3,7 +3,6 @@ import styles from "../styles.module.css";
 import { strict as assert } from "assert";
 import { stripHtml } from "string-strip-html";
 
-import OpenAI from "openai";
 
 
 const TextToSpeech = ({ text }) => {
@@ -29,7 +28,6 @@ const result = stripHtml(text).result;
 
 
 
- const openai = new OpenAI({apiKey: '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',dangerouslyAllowBrowser: true });
 
 
 
