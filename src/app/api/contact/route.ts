@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     const data = await resend.emails.send({
       from: "support@btcusdperp.com",
       to: ['support@btcusdperp.com'],
-      subject: "support at btcusdperp.com",
+      subject: "support at btcusdperp.com", 
       react: EmailTemplate(
         { email: email,
           first: first,
@@ -24,6 +24,9 @@ export async function POST(req: Request) {
          }
         ),
     });
+    // const test = await resend.emails.send({
+
+    // })
 
     return Response.json(data);
   } catch (error) {
