@@ -10,7 +10,7 @@ import { EditorState, convertToRaw, ContentState } from "draft-js";
 import parse from "html-react-parser";
 import EditorNew from "@/components/blog/blogCreatePost/quillEditor/quillEditor";
 import draftToHtml from "draftjs-to-html";
-import EditorReact from "./quillEditor/newquillEditor"
+import EditorReact from "./quillEditor/newquillEditor";
 let htmlToDraft = null;
 if (typeof window === "object") {
   htmlToDraft = require("html-to-draftjs").default;
@@ -84,19 +84,18 @@ export default function BlogCreatorPost({ postData = "new" }) {
     setErrors(errorsNow);
   };
 
+  const removeSelectedImage = () => {
+    if (typeof document !== "undefined") {
+      let fileInput = document.getElementById("eventPhoto");
 
-const removeSelectedImage = () => {
-  if (typeof document !== 'undefined') {
-    let fileInput = document.getElementById("eventPhoto");
-
-    if (fileInput instanceof HTMLInputElement) {
-      fileInput.value = "";
-      fileInput.dispatchEvent(new Event("change"));
+      if (fileInput instanceof HTMLInputElement) {
+        fileInput.value = "";
+        fileInput.dispatchEvent(new Event("change"));
+      }
     }
-  }
 
-  setEventImg(null);
-};
+    setEventImg(null);
+  };
   const [text, setText] = useState("");
 
   useEffect(() => {
@@ -349,10 +348,10 @@ const removeSelectedImage = () => {
         }}
       />*/}
       {/* <EditorNew value={text} setValue={setText} /> */}
-      <EditorReact value={text} setValue={setText}/>
+      <EditorReact value={text} setValue={setText} />
 
       {console.log(text)}
-    
+
       <div
         onClick={() => {
           if (!uploadingPost) {

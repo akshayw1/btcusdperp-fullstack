@@ -3,8 +3,6 @@ import styles from "../styles.module.css";
 import { strict as assert } from "assert";
 import { stripHtml } from "string-strip-html";
 
-
-
 const TextToSpeech = ({ text }) => {
   const [isPaused, setIsPaused] = useState(true);
   const [utterance, setUtterance] = useState(null);
@@ -22,14 +20,7 @@ const TextToSpeech = ({ text }) => {
     return `${formattedMinutes}:${formattedSeconds}`;
   };
 
-
-const result = stripHtml(text).result;
-
-
-
-
-
-
+  const result = stripHtml(text).result;
 
   useEffect(() => {
     if (synth) {
@@ -51,7 +42,7 @@ const result = stripHtml(text).result;
         setVoice(null);
       };
     }
-  }, [text, synth, voice, pitch, rate, volume]);
+  }, [text, synth, voice, pitch, rate, volume, result]);
 
   useEffect(() => {
     if (!synth) setSynth(window.speechSynthesis);
@@ -99,15 +90,14 @@ const result = stripHtml(text).result;
       //     handlePlay();
       //   }
       // }}
-      onClick={()=>{
-        if(!isPaused){
-
+      onClick={() => {
+        if (!isPaused) {
           handleStop();
-        }else{
+        } else {
           handlePlay();
         }
       }}
-      className={`${styles.audioBox} ${(synth && voice )? "" : styles.disable}`}
+      className={`${styles.audioBox} ${synth && voice ? "" : styles.disable}`}
     >
       {/* {console.log(isPaused)} */}
       {!isPaused ? (

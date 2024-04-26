@@ -1,7 +1,9 @@
-"use client"
+"use client";
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
-function EditorReact({value, setValue }) {
+import dynamic from "next/dynamic";
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+
+function EditorReact({ value, setValue }) {
   const modules = {
     toolbar: [
       [{ header: [1, 2, 3, 4, 5, 6, false] }],
@@ -12,8 +14,8 @@ function EditorReact({value, setValue }) {
       [{ list: "ordered" }, { list: "bullet" }],
       ["link", "image"],
       [{ color: ["red", "#785412"] }],
-      [{ background: ["red", "#785412"] }]
-    ]
+      [{ background: ["red", "#785412"] }],
+    ],
   };
 
   const formats = [
@@ -31,14 +33,13 @@ function EditorReact({value, setValue }) {
     "background",
     "align",
     "size",
-    "font"
+    "font",
   ];
 
   const [code, setCode] = useState("hellllo");
   const handleProcedureContentChange = (value) => {
     // setCode(content);
     setValue(value);
-    
   };
 
   return (
@@ -50,12 +51,11 @@ function EditorReact({value, setValue }) {
         formats={formats}
         value={value}
         onChange={(value) => {
-            setValue(value);
-          }}
+          setValue(value);
+        }}
       />
     </>
   );
 }
 
 export default EditorReact;
-
