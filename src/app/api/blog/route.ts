@@ -44,13 +44,15 @@ export async function POST(req: Request) {
   });
 
   await connectMongoDB();
+  const currentDateIST = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}); // Get current date in IST
+
   const postCreated = await Post.create({
     title,
     text,
     author,
     imageUrl,
     tag,
-    datePost: new Date(),
+    datePost: new Date(currentDateIST), // Use the IST time for datePost
   });
   if (postCreated)
     return NextResponse.json(
@@ -164,15 +166,18 @@ export async function PATCH(req: Request) {
   }
 
   await connectMongoDB();
+  const currentDateIST = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}); // Get current date in IST
+
 
   try {
+
     const postUpdated = await Post.findByIdAndUpdate(postId, {
       title,
       text,
       author,
       imageUrl,
       tag,
-      datePost: new Date(),
+      datePost: new Date(currentDateIST),
     });
 
     if (postUpdated) {

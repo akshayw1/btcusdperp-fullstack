@@ -39,7 +39,7 @@ export default function BlogPost({ id }) {
           const resData = await res.json();
           setPostData(resData.post);
           setRichText(resData.post.text);
-        } else {
+        } else {  
           router.push(`/blog`);
         }
       } catch (error) {
