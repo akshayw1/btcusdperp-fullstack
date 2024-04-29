@@ -4,6 +4,8 @@ import Post from "@/models/post";
 import jwt from "jsonwebtoken";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage } from "@/app/firebase";
+import date from 'date-and-time';
+
 
 export async function POST(req: Request) {
   const data = await req.formData();
@@ -44,15 +46,15 @@ export async function POST(req: Request) {
   });
 
   await connectMongoDB();
-  const currentDateIST = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}); // Get current date in IST
-
+  const currentDateIST = new Date();
+  const newDate = date.format(currentDateIST, 'dddd'+' '+ 'YYYY/MM/DD HH:mm:ss');
   const postCreated = await Post.create({
     title,
     text,
     author,
     imageUrl,
     tag,
-    datePost: new Date(currentDateIST), // Use the IST time for datePost
+    datePost: newDate, // Use the IST time for datePost
   });
   if (postCreated)
     return NextResponse.json(
@@ -166,8 +168,10 @@ export async function PATCH(req: Request) {
   }
 
   await connectMongoDB();
-  const currentDateIST = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}); // Get current date in IST
-
+  const currentDateIST = new Date();
+  const newDate = date.format(currentDateIST, 'dddd'+' '+ 'YYYY/MM/DD HH:mm:ss');
+  // console.log(currentDateIST);
+  
 
   try {
 
@@ -177,7 +181,7 @@ export async function PATCH(req: Request) {
       author,
       imageUrl,
       tag,
-      datePost: new Date(currentDateIST),
+      datePost: newDate,
     });
 
     if (postUpdated) {
