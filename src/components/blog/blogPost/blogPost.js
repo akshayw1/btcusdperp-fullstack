@@ -120,8 +120,8 @@ export default function BlogPost({ id }) {
                 <Image
                   priority
                   alt="hero"
-                  width={500}
-                  height={500}
+                  width={5000}
+                  height={5000}
                   src={postData.imageUrl}
                 />
               ) : null}
