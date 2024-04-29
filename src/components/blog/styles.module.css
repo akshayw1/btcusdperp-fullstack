@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: flex-start;
   font-size: 13px;
-  gap: 1em;
+  gap:1rem ;
 }
 .bgWhite {
   background-color: white;
@@ -262,7 +262,7 @@
   padding: 0.625em;
   align-items: center;
   padding-top: 1em;
-  width: 18%;
+  width: 20%;
   
 }
 .hotStory h3 {
