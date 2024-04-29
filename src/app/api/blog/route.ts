@@ -46,15 +46,16 @@ export async function POST(req: Request) {
   });
 
   await connectMongoDB();
-  const currentDateIST = new Date();
-  const newDate = date.format(currentDateIST, 'dddd'+' '+ 'YYYY/MM/DD HH:mm:ss');
+  // const currentDateIST = new Date();
+  const currentDateIST = date.addHours(new Date(), 5.5); // Add 5 hours and 30 minutes to convert from UTC to IST
+  const formattedDate = date.format(currentDateIST, 'dddd YYYY/MM/DD HH:mm:ss');
   const postCreated = await Post.create({
     title,
     text,
     author,
     imageUrl,
     tag,
-    datePost: newDate, // Use the IST time for datePost
+    datePost: formattedDate, // Use the IST time for datePost
   });
   if (postCreated)
     return NextResponse.json(
@@ -168,8 +169,8 @@ export async function PATCH(req: Request) {
   }
 
   await connectMongoDB();
-  const currentDateIST = new Date();
-  const newDate = date.format(currentDateIST, 'dddd'+' '+ 'YYYY/MM/DD HH:mm:ss');
+  const currentDateIST = date.addHours(new Date(), 5.5); // Add 5 hours and 30 minutes to convert from UTC to IST
+  const formattedDate = date.format(currentDateIST, 'dddd YYYY/MM/DD HH:mm:ss');
   // console.log(currentDateIST);
   
 
@@ -181,7 +182,7 @@ export async function PATCH(req: Request) {
       author,
       imageUrl,
       tag,
-      datePost: newDate,
+      datePost: formattedDate,
     });
 
     if (postUpdated) {
